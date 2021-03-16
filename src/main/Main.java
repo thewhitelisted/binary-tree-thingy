@@ -6,9 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		Random random = new Random();
-		Tree tree = new Tree(new Node(random.nextInt(100) + 1));
+		Tree tree = new Tree(random.nextInt(100) + 1);
 		for (int i = 0; i < 100; i ++) {
-			tree.addBranch(new Node(random.nextInt(100) + 1));
+			tree.addBranch(random.nextInt(100) + 1);
 		}
 		tree.printTree(tree.root);
 		System.out.print("\n");
