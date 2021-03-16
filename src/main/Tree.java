@@ -4,8 +4,8 @@ public class Tree {
 	Node root;
 	int parents = 0;
 
-	public Tree(Node root) {
-		this.root = root;
+	public Tree(int val) {
+		this.root = new Node(val);
 	}
 	public void searchForNode(Node root, int val) {
 		if (val == root.val) {
@@ -22,8 +22,8 @@ public class Tree {
 			parents = 0;
 		}
 	}
-	public void addBranch(Node newNode) {
-		root.addNode(newNode);
+	public void addBranch(int val) {
+		root.addNode(new Node(val));
 	}
 	public void printTree(Node root) {
 		// print left values
@@ -42,6 +42,6 @@ public class Tree {
 			System.out.print(root.val + " ");
 			printTree(root.right);
 		}
-		
+
 	}
 }
